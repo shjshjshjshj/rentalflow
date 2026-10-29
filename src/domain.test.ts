@@ -1,6 +1,10 @@
 import assert from "node:assert/strict";
 import { bookingNotificationSchedule, bookingViewState, canReleaseAsset, transitionBooking, type BookingState } from "./domain.ts";
 import { industryTemplates, makeTemplateWorkflow } from "./workflow-templates.ts";
+import { setLocale } from "./i18n/index.ts";
+
+// 화면 문구 검사는 기기 언어와 무관하게 기준 사전(한국어)로 고정한다.
+setLocale("ko");
 
 const booking: BookingState = {
   id: "R-TEST",
