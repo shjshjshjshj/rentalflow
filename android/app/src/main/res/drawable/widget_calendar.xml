@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 빈 상태의 작은 캘린더 outline. 앱이 쓰는 lucide 계열 도안과 같은 획 기준(24dp 그리드, 둥근 선). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:pathData="M4,8 a2,2 0 0 1 2,-2 h12 a2,2 0 0 1 2,2 v10 a2,2 0 0 1 -2,2 h-12 a2,2 0 0 1 -2,-2 z"
+        android:strokeColor="@color/widget_green"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="1.6" />
+    <path
+        android:pathData="M8,3.5 L8,7 M16,3.5 L16,7 M4,10.5 L20,10.5"
+        android:strokeColor="@color/widget_green"
+        android:strokeLineCap="round"
+        android:strokeWidth="1.6" />
+    <path
+        android:pathData="M8,14 h0.01 M12,14 h0.01 M16,14 h0.01 M8,17.5 h0.01 M12,17.5 h0.01"
+        android:strokeColor="@color/widget_green"
+        android:strokeLineCap="round"
+        android:strokeWidth="1.8" />
+</vector>

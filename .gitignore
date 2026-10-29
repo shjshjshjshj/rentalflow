@@ -1,0 +1,28 @@
+node_modules/
+dist/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Android build output and local machine settings
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/keystore.properties
+android/*.jks
+android/*.keystore
+android/app/google-services.json
+
+# Tooling
+*.tsbuildinfo
+.firebase/
+artifacts/
+.device-test/
+
+# OS files
+.DS_Store
+Thumbs.db
+android/app/src/main/assets/public/

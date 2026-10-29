@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- docs/android-widget-design.md v4: 상단 띠(무엇을 보는지) / 본문(오늘 일정 또는 빈 상태) / 하단 액션.
+     띠는 카드 전체 폭을 쓰고, 본문만 남는 높이를 차지한다. 무엇을 남길지는 provider 가 실측 높이로 정한다. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_background"
+    android:orientation="vertical"
+    android:paddingBottom="14dp">
+
+    <LinearLayout
+        android:id="@+id/widget_header"
+        style="@style/WidgetHeader">
+
+        <TextView
+            android:id="@+id/widget_header_title"
+            style="@style/WidgetHeaderTitle"
+            android:text="@string/widget_header" />
+
+        <TextView
+            android:id="@+id/widget_date"
+            style="@style/WidgetHeaderDate" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/widget_body"
+        style="@style/WidgetBody">
+
+        <LinearLayout
+            android:id="@+id/widget_items"
+            style="@style/WidgetItems">
+
+            <LinearLayout
+                android:id="@+id/widget_row_1"
+                style="@style/WidgetItemRow">
+
+                <TextView
+                    android:id="@+id/widget_row_1_bar"
+                    style="@style/WidgetItemBar" />
+
+                <TextView
+                    android:id="@+id/widget_row_1_time"
+                    style="@style/WidgetItemTime" />
+
+                <LinearLayout style="@style/WidgetItemText">
+
+                    <TextView
+                        android:id="@+id/widget_row_1_product"
+                        style="@style/WidgetItemProduct" />
+
+                    <TextView
+                        android:id="@+id/widget_row_1_kind"
+                        style="@style/WidgetItemKind" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/widget_row_2"
+                style="@style/WidgetItemRow"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:id="@+id/widget_row_2_bar"
+                    style="@style/WidgetItemBar" />
+
+                <TextView
+                    android:id="@+id/widget_row_2_time"
+                    style="@style/WidgetItemTime" />
+
+                <LinearLayout style="@style/WidgetItemText">
+
+                    <TextView
+                        android:id="@+id/widget_row_2_product"
+                        style="@style/WidgetItemProduct" />
+
+                    <TextView
+                        android:id="@+id/widget_row_2_kind"
+                        style="@style/WidgetItemKind" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/widget_empty"
+            style="@style/WidgetEmpty">
+
+            <FrameLayout
+                android:id="@+id/widget_empty_icon"
+                style="@style/WidgetEmptyIcon">
+
+                <ImageView
+                    style="@style/WidgetEmptyGlyph"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/widget_calendar" />
+            </FrameLayout>
+
+            <LinearLayout style="@style/WidgetEmptyText">
+
+                <TextView
+                    android:id="@+id/widget_message"
+                    style="@style/WidgetMessageTitle" />
+
+                <TextView
+                    android:id="@+id/widget_subtitle"
+                    style="@style/WidgetMessageSubtitle" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/widget_action_row"
+        style="@style/WidgetActionRow">
+
+        <FrameLayout
+            android:id="@+id/widget_footer_left"
+            style="@style/WidgetFooterLeft">
+
+            <LinearLayout style="@style/WidgetFooterLeftText">
+
+                <TextView
+                    android:id="@+id/widget_summary"
+                    style="@style/WidgetFootnote" />
+
+                <TextView
+                    android:id="@+id/widget_meta"
+                    style="@style/WidgetMeta" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/widget_action"
+            style="@style/WidgetActionTouch">
+
+            <TextView
+                android:id="@+id/widget_action_button"
+                style="@style/WidgetAction"
+                android:text="@string/widget_action_open_app" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

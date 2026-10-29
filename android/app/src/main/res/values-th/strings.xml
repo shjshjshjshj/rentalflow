@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_title">ส่งมอบและคืนวันนี้</string>
+    <string name="widget_description">ดูกำหนดส่งมอบและคืนวันนี้ได้ทันที</string>
+    <string name="widget_header">วันนี้</string>
+    <string name="widget_kind_rental">ส่งมอบ</string>
+    <string name="widget_kind_return">คืน</string>
+    <string name="widget_empty">วันนี้ไม่มีการ\nส่งมอบหรือคืน</string>
+    <string name="widget_empty_short">วันนี้ไม่มีกำหนดการ</string>
+    <string name="widget_empty_subtitle">การจองใหม่จะแสดงที่นี่</string>
+    <string name="widget_stale">ตรวจสอบกำหนดการล่าสุด</string>
+    <string name="widget_stale_short">ตรวจสอบกำหนดการล่าสุด</string>
+    <string name="widget_stale_subtitle">เปิดแอปเพื่ออัปเดตกำหนดการ</string>
+    <string name="widget_connect">โหลดกำหนดการวันนี้หรือไม่?</string>
+    <string name="widget_connect_short">เปิดแอปเพื่อดูกำหนดการ</string>
+    <string name="widget_connect_subtitle">เปิดแอปเพื่อดูการส่งมอบและคืน</string>
+    <string name="widget_setup">พร้อมส่งมอบครั้งแรกหรือยัง?</string>
+    <string name="widget_setup_short">ตั้งค่าพื้นฐานให้เสร็จ</string>
+    <string name="widget_setup_subtitle">ตั้งค่าพื้นฐานในแอปให้เสร็จ</string>
+    <string name="widget_footer_counts">ส่งมอบ %1$d · คืน %2$d ›</string>
+    <string name="widget_meta_time">อัปเดต %1$s</string>
+    <string name="widget_action_new">+ จองใหม่</string>
+    <string name="widget_action_new_description">สร้างการจองใหม่</string>
+    <string name="widget_action_refresh">รีเฟรช</string>
+    <string name="widget_action_setup">ตั้งค่าต่อ</string>
+    <string name="widget_action_open_app">เปิดแอป</string>
+    <string name="widget_footer_open">ดูในแอป ›</string>
+    <string name="widget_footer_open_description">ดูกำหนดการวันนี้ในแอป</string>
+    <string name="widget_row_description">%1$s %2$s %3$s</string>
+</resources>

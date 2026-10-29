@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="widget_title">Handovers &amp; returns today</string>
+    <string name="widget_description">See handovers and returns for today at a glance.</string>
+    <string name="widget_header">Today</string>
+    <string name="widget_kind_rental">Handover</string>
+    <string name="widget_kind_return">Return</string>
+    <string name="widget_empty">No handovers or\nreturns today</string>
+    <string name="widget_empty_short">No schedule today</string>
+    <string name="widget_empty_subtitle">New bookings show up here.</string>
+    <string name="widget_stale">Check the latest schedule</string>
+    <string name="widget_stale_short">Check the latest schedule</string>
+    <string name="widget_stale_subtitle">Open the app to refresh the schedule.</string>
+    <string name="widget_connect">Load the schedule for today?</string>
+    <string name="widget_connect_short">Open the app for the schedule</string>
+    <string name="widget_connect_subtitle">Open the app to see handovers and returns.</string>
+    <string name="widget_setup">Ready for the first handover?</string>
+    <string name="widget_setup_short">Finish the basic setup</string>
+    <string name="widget_setup_subtitle">Finish the basic setup in the app.</string>
+    <string name="widget_footer_counts">Handovers %1$d · Returns %2$d ›</string>
+    <string name="widget_meta_time">updated %1$s</string>
+    <string name="widget_action_new">+ New booking</string>
+    <string name="widget_action_new_description">Create a new booking</string>
+    <string name="widget_action_refresh">Refresh</string>
+    <string name="widget_action_setup">Continue setup</string>
+    <string name="widget_action_open_app">Open app</string>
+    <string name="widget_footer_open">View in app ›</string>
+    <string name="widget_footer_open_description">View the schedule for today in the app</string>
+    <string name="widget_row_description">%1$s %2$s %3$s</string>
+</resources>

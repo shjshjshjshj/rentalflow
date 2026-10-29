@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- docs/android-widget-design.md v4 의 토큰. 앱 디자인 시스템(design-system.css)의 md 토큰과 같은 값이다. -->
+    <!-- 배경: design-system.css 의 md-surface -->
+    <color name="widget_surface">#F5F6F8</color>
+    <!-- 일정 행 카드: 앱 카드 배경 -->
+    <color name="widget_row">#FFFFFF</color>
+    <!-- 본문: md-on-surface -->
+    <color name="widget_ink">#1A211E</color>
+    <!-- 보조 문구: md-on-surface-variant -->
+    <color name="widget_muted">#46534C</color>
+    <!-- 대여/주요 액션: md-primary -->
+    <color name="widget_green">#176B50</color>
+    <!-- 반납: md-tertiary -->
+    <color name="widget_blue">#365F83</color>
+    <!-- 아이콘 바탕: md-primary-container -->
+    <color name="widget_soft_green">#E5F4ED</color>
+    <!-- 주요 버튼 글자: md-on-primary -->
+    <color name="widget_on_primary">#FFFFFF</color>
+    <!-- 상단 띠: 제목 영역을 본문과 나누는 옅은 녹색 -->
+    <color name="widget_band">#E5F0EA</color>
+    <!-- 띠 위 제목 -->
+    <color name="widget_band_title">#234B3B</color>
+</resources>

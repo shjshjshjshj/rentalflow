@@ -1,0 +1,5 @@
+.integration-card { background: white; border: 1px solid #e5e7eb; border-radius: 18px; padding: 20px; }
+.integration-hint { color: #64748b; font-size: 13px; line-height: 1.6; }
+.integration-form { display: flex; flex-direction: column; gap: 14px; }
+.integration-form label { display: flex; flex-direction: column; gap: 8px; }
+.integration-form input { padding: 12px; border: 1px solid #cbd5e1; border-radius: 10px; min-width: 0; width: 100%; box-sizing: border-box; }

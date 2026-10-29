@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_title">Serahan dan pemulangan hari ini</string>
+    <string name="widget_description">Lihat serahan dan pemulangan hari ini sepintas lalu.</string>
+    <string name="widget_header">Hari ini</string>
+    <string name="widget_kind_rental">Serahan</string>
+    <string name="widget_kind_return">Pemulangan</string>
+    <string name="widget_empty">Tiada serahan atau\npemulangan hari ini</string>
+    <string name="widget_empty_short">Tiada jadual hari ini</string>
+    <string name="widget_empty_subtitle">Tempahan baharu dipaparkan di sini.</string>
+    <string name="widget_stale">Semak jadual terkini</string>
+    <string name="widget_stale_short">Semak jadual terkini</string>
+    <string name="widget_stale_subtitle">Buka aplikasi untuk mengemas kini jadual.</string>
+    <string name="widget_connect">Muatkan jadual hari ini?</string>
+    <string name="widget_connect_short">Buka aplikasi untuk jadual</string>
+    <string name="widget_connect_subtitle">Buka aplikasi untuk melihat serahan dan pemulangan.</string>
+    <string name="widget_setup">Sedia untuk serahan pertama?</string>
+    <string name="widget_setup_short">Lengkapkan persediaan asas</string>
+    <string name="widget_setup_subtitle">Lengkapkan persediaan asas dalam aplikasi.</string>
+    <string name="widget_footer_counts">Serahan %1$d · Pulang %2$d ›</string>
+    <string name="widget_meta_time">dikemas kini %1$s</string>
+    <string name="widget_action_new">+ Tempahan baharu</string>
+    <string name="widget_action_new_description">Cipta tempahan baharu</string>
+    <string name="widget_action_refresh">Muat semula</string>
+    <string name="widget_action_setup">Teruskan persediaan</string>
+    <string name="widget_action_open_app">Buka aplikasi</string>
+    <string name="widget_footer_open">Lihat dalam aplikasi ›</string>
+    <string name="widget_footer_open_description">Lihat jadual hari ini dalam aplikasi</string>
+    <string name="widget_row_description">%1$s %2$s %3$s</string>
+</resources>

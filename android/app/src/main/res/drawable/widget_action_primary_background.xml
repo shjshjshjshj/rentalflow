@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 하단 주요 액션: 앱의 기본 버튼과 같은 primary 면 + 흰 글자. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/widget_green" />
+    <corners android:radius="8dp" />
+</shape>

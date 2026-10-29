@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Rental Flow</string>
+    <string name="title_activity_main">Rental Flow</string>
+    <string name="package_name">com.team226.rentalflow</string>
+    <string name="custom_url_scheme">rentalflow</string>
+    <string name="widget_title">오늘의 대여·반납</string>
+    <string name="widget_description">오늘의 대여와 반납 일정을 한눈에 확인합니다.</string>
+    <string name="widget_header">오늘 일정</string>
+    <string name="widget_kind_rental">대여</string>
+    <string name="widget_kind_return">반납</string>
+    <string name="widget_empty">오늘은 예정된\n대여·반납이 없어요</string>
+    <string name="widget_empty_short">예정된 일정이 없어요</string>
+    <string name="widget_empty_subtitle">새 예약이 생기면 여기에 표시돼요.</string>
+    <string name="widget_stale">최신 일정을 확인해주세요</string>
+    <string name="widget_stale_short">최신 일정을 확인해요</string>
+    <string name="widget_stale_subtitle">앱을 열어 오늘 일정으로 새로고침해요.</string>
+    <string name="widget_connect">오늘 일정을 불러올까요?</string>
+    <string name="widget_connect_short">앱에서 일정을 확인해요</string>
+    <string name="widget_connect_subtitle">앱을 열면 대여·반납을 확인할 수 있어요.</string>
+    <string name="widget_setup">첫 대여를 준비해볼까요?</string>
+    <string name="widget_setup_short">기본 설정을 마쳐주세요</string>
+    <string name="widget_setup_subtitle">앱에서 기본 설정을 마쳐주세요.</string>
+    <string name="widget_footer_counts">대여 %1$d · 반납 %2$d ›</string>
+    <string name="widget_meta_time">%1$s 기준</string>
+    <string name="widget_action_new">+ 새 예약</string>
+    <string name="widget_action_new_description">새 예약 등록</string>
+    <string name="widget_action_refresh">새로고침</string>
+    <string name="widget_action_setup">설정 이어하기</string>
+    <string name="widget_action_open_app">앱 열기</string>
+    <string name="widget_footer_open">앱에서 보기 ›</string>
+    <string name="widget_footer_open_description">앱에서 오늘 일정 보기</string>
+    <string name="widget_row_description">%1$s %2$s %3$s</string>
+</resources>

@@ -1,0 +1,8 @@
+import { Check, ChevronRight, ShieldCheck } from "lucide-react";
+import { useState } from "react";
+import { policyHref, t, tt } from "./i18n";
+
+export default function ConsentGate({ busy, onAccept }: { busy: boolean; onAccept: () => Promise<void> }) {
+  const [terms, setTerms] = useState(false), [privacy, setPrivacy] = useState(false), [error, setError] = useState("");
+  return <main className="consent-shell"><section><span className="consent-icon"><ShieldCheck size={25} /></span><div className="consent-title"><small>{t("consent.eyebrow")}</small><h1>{t("consent.title1")}<br />{t("consent.title2")}</h1><p>{t("consent.copy")}</p></div><div className="consent-list"><label><input type="checkbox" checked={terms} onChange={event => setTerms(event.target.checked)} /><span>{terms && <Check size={15} />}</span><p><strong>{t("consent.terms")}</strong><small>{t("consent.termsHint")}</small></p><a href={policyHref("terms")}>{t("consent.view")} <ChevronRight size={15} /></a></label><label><input type="checkbox" checked={privacy} onChange={event => setPrivacy(event.target.checked)} /><span>{privacy && <Check size={15} />}</span><p><strong>{t("consent.privacy")}</strong><small>{t("consent.privacyHint")}</small></p><a href={policyHref("privacy")}>{t("consent.view")} <ChevronRight size={15} /></a></label></div>{error && <p className="form-error left">{tt(error)}</p>}<button className="consent-primary" disabled={busy || !terms || !privacy} onClick={async () => { try { await onAccept(); } catch (caught) { setError((caught as Error).message); } }}>{busy ? t("common.saving") : t("consent.accept")}</button></section></main>;
+}

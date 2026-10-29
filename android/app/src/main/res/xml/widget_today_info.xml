@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 기본 4x2. 런처는 minHeight 로 칸 수를 정한다(70n-30): 110dp=2칸, 180dp=3칸. 그래서 110dp 다.
+     4x1(표준 40dp, 이 기기 67.7dp)은 헤더+48dp 액션만으로 107dp 가 필요해 문구·일정이 들어갈 자리가 없다.
+     행은 코드에서도 2개로 끊는다(ROW_MAX). -->
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:description="@string/widget_description"
+    android:initialLayout="@layout/widget_today"
+    android:minHeight="110dp"
+    android:minResizeHeight="110dp"
+    android:minResizeWidth="180dp"
+    android:minWidth="250dp"
+    android:previewLayout="@layout/widget_today"
+    android:resizeMode="horizontal|vertical"
+    android:targetCellHeight="2"
+    android:targetCellWidth="4"
+    android:updatePeriodMillis="1800000"
+    android:widgetCategory="home_screen" />

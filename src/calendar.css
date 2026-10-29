@@ -1,0 +1,49 @@
+/* Dates scroll independently; contract text never participates in horizontal dragging. */
+.page:has(> .calendar-page) { overflow-y: auto; }
+.calendar-page { display: grid; grid-template-rows: auto auto minmax(240px, 1fr); gap: 20px; height: 100%; min-height: 0; }
+.calendar-page .page-intro { flex-wrap: nowrap; }
+.calendar-page .page-intro > div { min-width: 0; }
+.calendar-page .page-intro h1 { margin-top: var(--text-gap); }
+.calendar-picker { display: flex; align-items: center; gap: 8px; min-width: 0; padding: 8px; border-radius: 12px; background: var(--surface); }
+.calendar-today { flex: none; padding-inline: 8px; min-width: 48px; }
+.calendar-date-strip { position: relative; display: grid; grid-auto-flow: column; grid-auto-columns: 56px; min-width: 0; flex: 1; overflow-x: auto; overflow-anchor: none; overscroll-behavior-x: contain; scrollbar-width: none; gap: 4px; }
+.calendar-date-strip::-webkit-scrollbar { display: none; }
+.calendar-date-strip button:focus-visible { outline-offset: -3px; }
+.calendar-date-strip button { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 8px 0; background: transparent; border-radius: 8px; }
+.calendar-date-strip small { font: var(--type-body-small); color: var(--muted); }
+.calendar-date-strip strong { display: grid; place-items: center; min-width: 32px; min-height: 32px; border-radius: 12px; font: var(--type-title-medium); }
+.calendar-date-strip [aria-current="date"] strong { box-shadow: inset 0 0 0 1px var(--green); }
+.calendar-date-strip [aria-pressed="true"] { background: var(--soft); }
+.calendar-date-strip [aria-pressed="true"] strong { color: white; background: var(--ink); }
+.calendar-day-agenda { display: grid; grid-template-rows: auto minmax(0, 1fr); gap: 12px; min-height: 0; }
+.calendar-day-heading { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; justify-content: space-between; }
+.calendar-day-heading h2 { margin: 0; font: var(--type-title-medium); }
+.calendar-day-heading > span { color: var(--muted); font: var(--type-body-small); }
+.calendar-contract-list { overflow-y: auto; overscroll-behavior-y: contain; display: flex; flex-direction: column; gap: 12px; padding: 3px 3px 12px; min-height: 0; }
+.calendar-contract { display: flex; flex: none; align-items: flex-start; gap: var(--content-gap); padding: 12px; border-radius: 12px; background: var(--blue-soft); color: var(--ink); text-align: left; width: 100%; }
+.calendar-contract.green { background: var(--green-soft); }
+.calendar-contract.red { background: var(--red-soft); }
+.calendar-contract.complete { background: var(--surface); }
+.calendar-contract-icon { display: grid; place-items: center; width: 40px; height: 40px; flex: none; border-radius: 50%; background: rgb(255 255 255 / .65); color: var(--blue); }
+.calendar-contract.green .calendar-contract-icon { color: var(--green); }
+.calendar-contract.red .calendar-contract-icon { color: var(--red); }
+.calendar-contract.complete .calendar-contract-icon { color: var(--muted); background: var(--soft); }
+.calendar-contract-content { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: var(--text-gap); }
+.calendar-contract-title { display: flex; align-items: flex-start; gap: 8px; }
+.calendar-contract-title strong { flex: 1; font: var(--type-title-medium); }
+.calendar-contract-title svg { flex: none; margin-top: 3px; }
+.calendar-contract-content > small, .calendar-contract-meta small { color: var(--muted); font: var(--type-body-small); }
+.calendar-contract-times { display: grid; gap: 4px; margin-top: 8px; font: var(--type-body-small); }
+.calendar-contract-times > span { display: flex; align-items: flex-start; gap: 8px; }
+.calendar-contract-times svg { flex: none; }
+.calendar-contract-times time { font-variant-numeric: tabular-nums; }
+.calendar-contract-meta { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.calendar-contract-meta > span { font: var(--type-label-medium); }
+.calendar-empty { display: grid; justify-items: center; gap: 4px; text-align: center; padding: 32px 12px; color: var(--muted); }
+.calendar-empty > svg { margin-bottom: 8px; }
+.calendar-empty p { margin: 0; font: var(--type-body-medium); }
+@media (max-height: 600px) {
+  .page:has(> .calendar-page) { overflow-y: auto; }
+  .calendar-page { height: auto; grid-template-rows: auto auto auto; }
+  .calendar-contract-list { overflow: visible; }
+}

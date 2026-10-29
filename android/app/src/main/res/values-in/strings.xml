@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_title">Penyerahan &amp; pengembalian hari ini</string>
+    <string name="widget_description">Lihat penyerahan dan pengembalian hari ini.</string>
+    <string name="widget_header">Hari ini</string>
+    <string name="widget_kind_rental">Penyerahan</string>
+    <string name="widget_kind_return">Pengembalian</string>
+    <string name="widget_empty">Tidak ada penyerahan atau\npengembalian hari ini</string>
+    <string name="widget_empty_short">Tidak ada jadwal hari ini</string>
+    <string name="widget_empty_subtitle">Pemesanan baru muncul di sini.</string>
+    <string name="widget_stale">Periksa jadwal terbaru</string>
+    <string name="widget_stale_short">Periksa jadwal terbaru</string>
+    <string name="widget_stale_subtitle">Buka aplikasi untuk memperbarui jadwal.</string>
+    <string name="widget_connect">Muat jadwal hari ini?</string>
+    <string name="widget_connect_short">Buka aplikasi untuk jadwal</string>
+    <string name="widget_connect_subtitle">Buka aplikasi untuk melihat jadwal.</string>
+    <string name="widget_setup">Siap untuk penyerahan pertama?</string>
+    <string name="widget_setup_short">Selesaikan pengaturan awal</string>
+    <string name="widget_setup_subtitle">Selesaikan pengaturan awal di aplikasi.</string>
+    <string name="widget_footer_counts">Serah %1$d · Kembali %2$d ›</string>
+    <string name="widget_meta_time">diperbarui %1$s</string>
+    <string name="widget_action_new">+ Pemesanan</string>
+    <string name="widget_action_new_description">Buat pemesanan baru</string>
+    <string name="widget_action_refresh">Perbarui</string>
+    <string name="widget_action_setup">Lanjutkan</string>
+    <string name="widget_action_open_app">Buka aplikasi</string>
+    <string name="widget_footer_open">Lihat di aplikasi ›</string>
+    <string name="widget_footer_open_description">Lihat jadwal hari ini di aplikasi</string>
+    <string name="widget_row_description">%1$s %2$s %3$s</string>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_title">Bàn giao và trả hôm nay</string>
+    <string name="widget_description">Xem nhanh lịch bàn giao và trả hôm nay.</string>
+    <string name="widget_header">Hôm nay</string>
+    <string name="widget_kind_rental">Bàn giao</string>
+    <string name="widget_kind_return">Trả</string>
+    <string name="widget_empty">Hôm nay không có\nlịch giao hoặc trả</string>
+    <string name="widget_empty_short">Hôm nay không có lịch</string>
+    <string name="widget_empty_subtitle">Đơn mới sẽ xuất hiện ở đây.</string>
+    <string name="widget_stale">Kiểm tra lịch mới nhất</string>
+    <string name="widget_stale_short">Kiểm tra lịch mới nhất</string>
+    <string name="widget_stale_subtitle">Mở ứng dụng để cập nhật lịch.</string>
+    <string name="widget_connect">Tải lịch hôm nay?</string>
+    <string name="widget_connect_short">Mở ứng dụng để xem lịch</string>
+    <string name="widget_connect_subtitle">Mở ứng dụng để xem lịch giao và trả.</string>
+    <string name="widget_setup">Sẵn sàng bàn giao lần đầu?</string>
+    <string name="widget_setup_short">Hoàn tất thiết lập cơ bản</string>
+    <string name="widget_setup_subtitle">Hoàn tất thiết lập cơ bản trong ứng dụng.</string>
+    <string name="widget_footer_counts">Giao %1$d · Trả %2$d ›</string>
+    <string name="widget_meta_time">cập nhật %1$s</string>
+    <string name="widget_action_new">+ Đặt thuê mới</string>
+    <string name="widget_action_new_description">Tạo đơn thuê mới</string>
+    <string name="widget_action_refresh">Làm mới</string>
+    <string name="widget_action_setup">Tiếp tục thiết lập</string>
+    <string name="widget_action_open_app">Mở ứng dụng</string>
+    <string name="widget_footer_open">Xem trong ứng dụng ›</string>
+    <string name="widget_footer_open_description">Xem lịch hôm nay trong ứng dụng</string>
+    <string name="widget_row_description">%1$s %2$s %3$s</string>
+</resources>

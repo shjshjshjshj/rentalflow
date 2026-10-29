@@ -1,0 +1,416 @@
+/* Material 3 semantic roles, with RentalFlow's spacing and shape overrides. */
+.settings-overview {
+  display: grid;
+  margin: 0;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .settings-overview {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.settings-overview > div {
+  padding: 12px;
+  border-radius: 12px;
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.settings-overview dt {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.settings-overview dd {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.settings-overview dd strong {
+  font-weight: 700;
+}
+
+.settings-overview dd small {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.settings-overview .badge-pro {
+  color: var(--green);
+}
+
+.settings-note {
+  font-size: 0.8125rem;
+  color: var(--muted);
+  margin: 8px 0 0;
+}
+:root {
+  --md-primary: #176b50;
+  --md-on-primary: #ffffff;
+  --md-primary-container: #e5f4ed;
+  --md-on-primary-container: #003826;
+  --md-secondary: #4e635b;
+  --md-secondary-container: #d3e8de;
+  --md-tertiary: #365f83;
+  --md-tertiary-container: #eaf3ff;
+  --md-surface: #f5f6f8;
+  --md-surface-container: #edf1ef;
+  --md-surface-container-low: #f2f5f3;
+  --md-on-surface: #1a211e;
+  --md-on-surface-variant: #46534c;
+  --md-outline: #748078;
+  --md-outline-variant: #c5cec8;
+  --md-error: #a52a2a;
+  --md-error-container: #fff0ed;
+  --md-warning: #775600;
+  --md-warning-container: #fff0bd;
+  --ink: var(--md-on-surface);
+  --muted: var(--md-on-surface-variant);
+  --line: var(--md-outline-variant);
+  --surface: #fff;
+  --soft: var(--md-surface-container);
+  --green: var(--md-primary);
+  --green-soft: var(--md-primary-container);
+  --blue: var(--md-tertiary);
+  --blue-soft: var(--md-tertiary-container);
+  --red: var(--md-error);
+  --red-soft: var(--md-error-container);
+  --amber: var(--md-warning);
+  --amber-soft: var(--md-warning-container);
+  --layout-margin: 20px;
+  --layout-gutter: 8px;
+  --text-gap: 4px;
+  --content-gap: 12px;
+  --space-sm: 12px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --radius: 8px;
+  --radius-large: 12px;
+  --card-radius: 12px;
+  --top-bar-height: calc(max(64px, 3.5rem) + var(--app-safe-top));
+  --navigation-height: calc(max(80px, 3rem + 32px) + var(--app-safe-bottom));
+  color: var(--ink);
+  background: var(--md-surface);
+}
+body { background: var(--md-surface); }
+button { min-height: 48px; border-radius: var(--radius); }
+button:disabled { cursor: default; }
+button:focus-visible, a:focus-visible { outline: 3px solid var(--md-tertiary); outline-offset: 2px; }
+button:not(:disabled):active { filter: brightness(.94); }
+input, select, textarea { accent-color: var(--green); }
+input:not([type="checkbox"]):not([type="radio"]), select, textarea { border-radius: var(--radius); }
+input[type="checkbox"], input[type="radio"] { flex: none; width: 20px; height: 20px; }
+:is(h1,h2,h3,p,strong,small,em,span) { overflow-wrap: anywhere; }
+
+/* The document cannot drag the navigation: only the content pane scrolls. */
+html:has(.app-frame), body:has(.app-frame) { height: 100%; overflow: hidden; }
+.app-frame { height: 100dvh; min-height: 0; overflow: hidden; }
+.app-frame .app-main { height: 100%; min-height: 0; padding: var(--top-bar-height) 0 var(--navigation-height); overflow: hidden; }
+.app-frame .page { height: 100%; overflow-y: auto; overscroll-behavior-y: contain; padding: 24px var(--layout-margin) 32px; max-width: 1200px; width: 100%; scroll-padding-block: 24px; }
+.app-frame .app-bar { position: fixed; inset: 0 0 auto; width: auto; height: var(--top-bar-height); padding: var(--app-safe-top) 20px 0; background: var(--md-surface); z-index: 40; }
+.app-frame .bottom-nav { height: var(--navigation-height); background: var(--md-surface-container); z-index: 40; }
+.bottom-nav button { gap: 4px; border-radius: 0; min-width: 0; }
+.bottom-nav button svg { box-sizing: content-box; padding: 4px 16px; border-radius: 24px; flex: none; }
+.bottom-nav button.active svg { background: var(--md-primary-container); color: var(--md-on-primary-container); }
+.app-bar .icon-button, .workflow-setting-head > button, .detail-sheet > header button { min-width: 48px; width: 48px; height: 48px; border: 0; background: transparent; border-radius: 50%; }
+.page-stack { display: grid; grid-template-columns: repeat(12,minmax(0,1fr)); column-gap: var(--layout-gutter); row-gap: 24px; }
+.page-stack > * { grid-column: 1 / -1; min-width: 0; }
+.page-intro { gap: 12px; min-height: 0; align-items: center; flex-wrap: wrap; }
+.page-intro.compact { min-height: 48px; }
+.page-intro h1 { margin: 12px 0 0; }
+.page-intro > div { min-width: 180px; }
+.primary-command, .outline-command { min-height: 48px; height: auto; padding: 12px; gap: 8px; white-space: normal; }
+.intro-actions, .inventory-actions, .group-setting-actions { gap: 8px; }
+.status-strip { grid-template-columns: repeat(12,minmax(0,1fr)); gap: 8px; border: 0; background: transparent; }
+.status-strip > div { grid-column: span 3; padding: 8px; border: 0; border-radius: 8px; background: var(--soft); min-width: 0; }
+.status-strip small { white-space: normal; }
+.status-strip strong { margin-top: var(--text-gap); }
+.attention-band { background: transparent; border: 0; border-top: 1px solid var(--line); padding: 24px 0 0; }
+.attention-list { gap: 12px; margin-top: 12px; }
+.attention-list > button { padding: 12px; border: 0; border-radius: var(--card-radius); gap: var(--content-gap); }
+.attention-list p { margin: 0; min-width: 0; gap: var(--text-gap); }
+.attention-list small { margin: 0; }
+.attention-list > button > span { padding: 8px; border-radius: 8px; }
+.section-title { gap: 12px; }
+.section-title > button { min-width: 48px; }
+.schedule-list { display: grid; gap: 12px; margin-top: 12px; border: 0; }
+.schedule-list > button { padding: 12px; gap: var(--content-gap); border: 0; border-radius: var(--card-radius); background: var(--surface); }
+.schedule-list p { gap: var(--text-gap); min-width: 0; }
+.schedule-list strong, .schedule-list > button > i, .schedule-list > button > span { margin: 0; }
+.schedule-list time { width: 44px; flex: none; }
+.inventory-summary { gap: 12px; flex-wrap: wrap; }
+
+/* Repeated rows, outlined cards and controls. */
+.trigger-accordions, .field-definition-list, .checklist { border: 0; border-block: 1px solid var(--line); background: var(--surface); }
+.work-list, .product-list, .settings-list { display: grid; gap: 12px; border: 0; background: transparent; }
+.work-list > button, .product-list > button, .settings-list > button, .inventory-page .product-list > button { padding: 12px; border: 0; border-radius: var(--card-radius); gap: var(--content-gap); min-height: 72px; background: var(--surface); }
+.work-list > button:last-child, .product-list > button:last-child, .settings-list > button:last-child { border: 0; }
+.trigger-head, .field-definition-list > button { padding: 12px; border-radius: 0; gap: var(--content-gap); min-height: 72px; }
+.work-list p, .product-list p, .settings-list p { margin: 0; gap: var(--text-gap); }
+.work-list > button > svg, .product-list > button > svg, .settings-list > button > svg, .setting-group-row > svg, .trigger-head > svg, .field-definition-list > button > svg { flex: none; }
+.work-list strong, .product-list strong, .settings-list strong, .trigger-head strong, .trigger-steps strong, .field-definition-list strong { margin: 0; }
+.work-list small, .product-list small, .settings-list small, .work-list em, .product-list em, .trigger-head small, .trigger-steps small, .field-definition-list small { margin: 0; }
+.work-list > button > b, .product-list > button > b, .settings-list > button > i { padding: 8px; margin: 0; border-radius: 8px; }
+.work-icon, .product-list > button > span, .settings-list > button > span { border-radius: 50%; width: 40px; height: 40px; }
+.work-list em { margin-top: 8px; }
+.search-field, .work-search { min-height: 56px; height: auto; padding: 8px 12px; gap: 8px; border-radius: 8px; }
+.search-field input, .work-search input { margin: 0; padding: 8px 0; }
+.segmented { background: transparent; border: 1px solid var(--line); border-radius: 8px; padding: 0; overflow: hidden; gap: 0; }
+.segmented button { min-height: 48px; height: auto; border-radius: 0; padding: 8px; }
+.segmented button + button { border-left: 1px solid var(--line); }
+.segmented button.active { background: var(--green-soft); color: var(--md-on-primary-container); box-shadow: none; }
+.setting-group-row { padding: 12px; border: 0; border-radius: var(--card-radius); gap: var(--content-gap); }
+.setting-group-row + .setting-group-row { border-top: 0; }
+.setting-group-row > div { min-width: 0; gap: var(--text-gap); }
+.setting-group-row strong { margin: 0; }
+.setting-group-row small, .setting-group-row em { margin: 0; }
+.setting-group-row em { margin-top: 8px; }
+.workflow-monitor { gap: 12px; }
+.trigger-head p, .field-definition-list > button p { gap: var(--text-gap); min-width: 0; }
+.trigger-steps { padding: 0 8px; background: var(--md-surface-container-low); }
+.trigger-steps > div { gap: 8px; }
+.trigger-steps > div > button { padding: 12px 8px; gap: var(--text-gap); }
+.trigger-steps > div > div button { min-width: 48px; min-height: 48px; }
+.field-definition-list > header { padding: 12px; }
+.field-definition-list header span, .plan-badge, .settings-message { padding: 8px; border-radius: 8px; }
+.field-definition-list header button { padding: 8px; }
+.platform-note { display: none; }
+
+/* Forms and operational records share the same spacing and input geometry. */
+.form-stack, .field-builder, .onboarding-form { gap: 24px; }
+.form-field, .wizard-input, .field-builder > label { gap: 12px; }
+.form-field input, .form-field select, .form-field textarea, .inline-input input, .inline-input select, .wizard-input input, .field-builder input, .onboarding-form input, .onboarding-form select { min-height: 56px; padding: 12px; border: 1px solid var(--md-outline); border-radius: 8px; }
+.form-field select, .onboarding-form select { appearance: auto; }
+input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--green); outline-offset: 1px; box-shadow: none; }
+.two-fields { grid-template-columns: repeat(12,minmax(0,1fr)); gap: 8px; }
+.two-fields > * { grid-column: span 12; }
+.form-primary, .danger-button, .logout-button, .consent-primary, .wizard-add, .onboarding-primary { min-height: 48px; height: auto; padding: 12px; border-radius: 8px; gap: 8px; box-shadow: none; }
+.form-section-title { padding-bottom: 12px; margin: 0; }
+.notification-choice { gap: 12px; padding: 12px; }
+.notification-choice p, .notification-choice > span { margin: 0; }
+.notification-choice p { gap: var(--text-gap); }
+.booking-state, .info-note, .booking-alert, .structure-preview { padding: 12px; border-radius: 8px; }
+.booking-state strong { margin-top: 4px; }
+.runtime-head { padding-bottom: 24px; }
+.runtime-head h2 { margin: 12px 0; }
+.checklist > div { padding: 12px; }
+.checklist small { margin-top: 4px; }
+.check-index { border-radius: 50%; }
+.item-action, .photo-action, .inline-input button { min-height: 48px; height: auto; border-radius: 8px; padding: 8px 12px; margin-top: 12px; }
+.inline-input { gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+.inline-input input, .inline-input select { flex: 1; min-width: 100px; }
+.inline-input button { margin: 0; width: auto; }
+.outcome-block { padding-top: 24px; gap: 12px; }
+.outcome-block button { padding: 12px; min-height: 48px; height: auto; }
+.record-photo { border-radius: 8px; }
+.detail-sheet > header { height: var(--top-bar-height); grid-template-columns: 48px 1fr 48px; padding-inline: 20px; background: var(--surface); z-index: 1; }
+.detail-content { padding: 24px 20px 32px; scroll-padding-block: 24px; }
+.detail-footer { padding: 12px 20px calc(12px + var(--app-safe-bottom)); }
+.booking-detail-bar { height: var(--top-bar-height); padding: var(--app-safe-top) 20px 0; }
+.booking-detail-body { padding: 24px 20px 32px; }
+.booking-detail-footer { padding: 12px 20px calc(12px + var(--app-safe-bottom)); }
+.booking-summary h1 { margin: 4px 0; }
+.booking-summary p { margin: 4px 0; }
+.booking-customer { margin: 24px 0; }
+.booking-summary dl { padding: 12px 0; }
+.booking-summary dl > div { gap: 12px; margin: 12px 0; }
+.booking-procedure h2 { margin: 24px 0 12px; }
+.booking-trigger h3 { margin: 24px 0 12px; }
+.booking-trigger > button { border-radius: 0; gap: 12px; }
+.booking-alert { margin: 24px 0; }
+
+/* Onboarding and workflow setup: same system, no miniature controls. */
+.onboarding-shell, .workflow-wizard, .consent-shell { background: var(--md-surface); }
+.onboarding-shell > .onboarding-appbar { height: var(--top-bar-height); padding-inline: 20px; background: var(--surface); }
+.onboarding-progress { top: var(--top-bar-height); }
+.onboarding-page { padding: calc(var(--top-bar-height) + 24px) 20px calc(96px + var(--app-safe-bottom)); }
+.onboarding-title h1, .wizard-title h1 { margin: 0 0 12px; }
+.choice-list, .template-grid, .onboarding-form, .onboarding-workflow-actions, .onboarding-workflow-list { margin-top: 24px; gap: 12px; }
+.choice-list > button, .template-grid button, .onboarding-workflow-actions > button, .push-onboarding-card { padding: 12px; gap: 12px; border-radius: 8px; }
+.choice-list > button p, .template-grid button p { margin: 0; gap: var(--text-gap); }
+.choice-list small, .choice-list em, .template-grid button small, .onboarding-workflow-actions small { margin: 0; }
+.choice-list > button.selected, .template-grid button.selected { background: var(--green-soft); border-color: var(--green); box-shadow: none; }
+.onboarding-ready-product, .onboarding-help { padding: 12px; gap: 24px; }
+.onboarding-detail-offer > header button, .push-onboarding-card button, .onboarding-extra-fields > div > button { min-height: 48px; min-width: 48px; padding: 8px; border-radius: 8px; }
+.onboarding-floating-action, .workflow-wizard .wizard-primary { width: calc(100% - 40px); max-width: 580px; box-shadow: none; }
+.onboarding-primary, .workflow-wizard .wizard-primary { min-height: 56px; }
+.onboarding-benefits, .onboarding-workflow-list { background: transparent; border: 0; border-block: 1px solid var(--line); border-radius: 0; padding: 0; }
+.onboarding-workflow-list > button, .onboarding-benefits article { padding: 12px; gap: var(--content-gap); }
+.onboarding-workflow-list p { margin: 0; gap: var(--text-gap); }
+.onboarding-workflow-list p strong, .onboarding-workflow-list p em { margin: 0; }
+.onboarding-workflow-list p small, .onboarding-workflow-list p em, .onboarding-benefits small { white-space: normal; }
+.workflow-wizard > header { height: var(--top-bar-height); padding-inline: 20px; z-index: 60; }
+.workflow-wizard > header > button { min-width: 48px; min-height: 48px; }
+.workflow-wizard > main { padding: calc(var(--top-bar-height) + 24px) 20px calc(112px + var(--app-safe-bottom)); }
+.wizard-title p { margin-bottom: 24px; }
+.wizard-choices, .result-presets { border: 0; background: transparent; }
+.wizard-choices > button, .result-presets button { border: 1px solid var(--line); border-radius: 8px; margin-bottom: 12px; padding: 12px; gap: 12px; }
+.wizard-choices p { margin: 0; gap: var(--text-gap); }
+.result-presets button { gap: var(--text-gap); }
+.result-presets small { margin: 0; }
+.wizard-choices > button.selected, .result-presets button.selected { background: var(--green-soft); border-color: var(--green); box-shadow: none; }
+.wizard-items > div, .wizard-review { padding: 12px; border-radius: 8px; }
+.type-options { gap: 8px; }
+.type-options button, .field-type-grid button, .preview-trigger-tabs button { min-height: 48px; height: auto; padding: 8px; border-radius: 8px; }
+.wizard-items label { gap: 12px; }
+.field-builder { padding: 0; border: 0; background: transparent; }
+.preview-trigger-tabs { gap: 8px; padding: 0; }
+.workflow-test-card, .onboarding-test-card { border-radius: 8px; overflow: hidden; }
+.workflow-test-card > header, .onboarding-test-card > header, .workflow-test-card > footer, .onboarding-test-card > footer { padding: 12px; gap: 12px; }
+.workflow-test-card > div, .onboarding-test-card > div { padding: 0 12px; }
+.workflow-test-card > div > button, .onboarding-test-card > div > button, .test-input-row { padding: 12px 0; gap: 12px; }
+.workflow-test-card > footer button, .onboarding-test-card > footer > button { padding: 12px; min-height: 48px; height: auto; border-radius: 8px; }
+.workflow-preview-result { padding: 32px 0; gap: 24px; }
+.workflow-test-card > div p, .onboarding-test-card > div p, .onboarding-test-card .test-input-row p, .push-onboarding-card p { min-width: 0; margin: 0; gap: var(--text-gap); }
+.workflow-test-card > div small, .onboarding-test-card > div small, .push-onboarding-card small { margin: 0; }
+.test-input-row input, .test-input-row select { width: 100%; min-height: 48px; padding: 8px; }
+.onboarding-test-finished h1, .onboarding-outcome-result h1 { margin: 24px 0 12px; }
+.consent-card { padding: 12px; }
+
+/* Sign-in: brand, one quiet calendar visual, then the two actions. Safe areas are counted once, on the page. */
+.login-page { align-items: stretch; background: #fafbf8; display: flex; justify-content: center; min-height: 100dvh; padding: var(--app-safe-top) 24px var(--app-safe-bottom); }
+.login-panel { display: flex; margin: 0 auto; max-width: 400px; width: 100%; }
+.login-form { align-self: stretch; display: flex; flex: 1; flex-direction: column; gap: 32px; margin: 0; max-width: none; padding: 24px 0; }
+.login-entry { align-items: center; display: flex; flex-direction: column; margin: auto 0; text-align: center; }
+.login-entry > img { border-radius: 15px; height: 52px; width: 52px; }
+.login-visual { display: block; margin-top: 40px; }
+.login-copy { margin-top: 26px; }
+.login-copy h1 { color: #123e32; font: 600 1.375rem/1.875rem var(--font-family); margin: 0; }
+.login-copy p { color: #66736c; font: 400 .875rem/1.375rem var(--font-family); margin: 6px 0 0; }
+.login-actions { display: flex; flex-direction: column; gap: 10px; }
+.login-actions .google-button { border-radius: 9999px; font: 500 .875rem/1.25rem var(--font-family); height: auto; min-height: 48px; padding: 12px 16px; }
+.preview-button { background: #eaf0e5; border-radius: 9999px; color: #123e32; font: 500 .875rem/1.25rem var(--font-family); height: auto; min-height: 48px; padding: 12px 16px; width: 100%; }
+.login-consent { text-align: center; }
+.login-consent > small { color: #6b756e; display: block; font: 400 .6875rem/1.0625rem var(--font-family); }
+.login-links { color: #6b756e; font: 400 .6875rem/1.0625rem var(--font-family); margin: 4px 0 0; }
+.login-links a { color: #6b756e; min-height: 0; padding: 6px 2px; }
+.consent-list label { min-height: 48px; }
+.consent-title { margin-top: 24px; }
+.consent-title h1 { margin: 12px 0; }
+.consent-list { margin-top: 24px; border-radius: 8px; overflow: hidden; }
+.consent-list a { min-width: 48px; min-height: 48px; justify-content: center; }
+.consent-list input:focus-visible + span { outline: 3px solid var(--blue); outline-offset: 2px; }
+.workflow-test-card > div > button, .onboarding-test-card > div > button { border-radius: 0; }
+.workflow-test-card > footer button[data-outcome="cancel_booking"],
+.workflow-test-card > footer button[data-outcome="create_issue"] { background: var(--red-soft); color: var(--red); }
+.workflow-test-card > footer button[data-outcome="hold_booking"] { background: var(--amber-soft); color: var(--amber); }
+.onboarding-detail-offer > header { flex-wrap: wrap; }
+.onboarding-detail-offer > header p { flex-basis: 180px; }
+.onboarding-nav-button, .onboarding-restart { min-height: 48px; }
+.onboarding-nav-button { min-width: 48px; }
+/* The fixed action sits inside the page's own bottom padding; the shell must not add more. */
+.onboarding-shell { padding-bottom: 0; }
+.primary-command.icon-only { min-width: 48px; }
+.account-settings p { color: var(--muted); margin: 12px 0; }
+.confirmation-row, .notification-switch { display: flex; align-items: center; gap: 12px; min-height: 56px; padding: 12px; }
+.notification-switch { justify-content: space-between; border-block: 1px solid var(--line); }
+.notification-switch span { display: grid; gap: var(--text-gap); }
+.notification-switch small { color: var(--muted); }
+.notification-switch input { appearance: none; flex: 0 0 52px; width: 52px; height: 32px; border: 2px solid var(--md-outline); border-radius: 24px; background: var(--soft); position: relative; margin-block: 8px; }
+.notification-switch input::after { content: ""; position: absolute; top: 4px; left: 4px; width: 20px; height: 20px; border-radius: 50%; background: var(--muted); }
+.notification-switch input:checked { background: var(--green); border-color: var(--green); }
+.notification-switch input:checked::after { left: 24px; background: white; }
+.notification-switch input:disabled { opacity: .5; }
+.danger-command { background: var(--red); color: white; min-height: 56px; padding: 12px; }
+
+@media (max-width: 1023px) {
+  .app-frame:has(.workflow-setting-head) .app-main { padding-top: var(--top-bar-height); }
+  .app-frame:has(.workflow-setting-head) .page { padding-top: 24px; }
+  .workflow-setting-head { height: var(--top-bar-height); margin: 0; padding: var(--app-safe-top) 20px 0; z-index: 40; gap: 12px; flex-wrap: nowrap; }
+  .workflow-setting-head h1 { margin: 0; }
+  .workflow-setting-head > div { min-width: 0; }
+  .workflow-setting-head .header-preview { min-height: 48px; padding: 8px; }
+  .app-frame:has(.workflow-wizard) .bottom-nav, .app-frame:has(.workflow-wizard) .app-bar { display: none; }
+  .app-frame:has(.workflow-wizard) .app-main { padding: 0; }
+  .app-frame:has(.workflow-wizard) .page { padding: 0; }
+  .trigger-steps > div > div { flex-direction: column; }
+}
+@media (max-width: 599px) {
+  .page-intro:not(.compact) > div { flex-basis: 100%; }
+  .page-intro:not(.compact) > button { margin-left: auto; }
+  .status-strip > div { grid-column: span 6; }
+  .booking-summary dl > div { flex-wrap: wrap; }
+  .booking-summary dd { margin-left: auto; }
+}
+@media (min-width: 600px) {
+  .two-fields > * { grid-column: span 6; }
+  .attention-list { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (min-width: 1024px) {
+  :root { --navigation-height: 0px; }
+  .app-frame .app-bar { left: 220px; }
+  .app-frame .workflow-wizard > header { left: 220px; }
+  .app-frame .workflow-wizard > main { padding-top: 24px; }
+  .app-frame .workflow-wizard .wizard-primary { left: calc(50% + 110px); }
+  .side-nav { height: 100dvh; overflow-y: auto; background: var(--md-surface-container); color: var(--ink); padding: 24px 12px; }
+  .side-nav > button { color: var(--muted); padding: 12px; }
+  .side-nav > button.active { background: var(--green-soft); color: var(--md-on-primary-container); }
+  .side-user { border-color: var(--line); }
+  .side-user strong, .side-user small { color: var(--muted); }
+  .booking-detail-body { width: 100%; max-width: 760px; margin: auto; }
+  .app-frame:has(.workflow-setting-head) .app-bar { display: none; }
+  .workflow-setting-head { position: fixed; top: 0; left: 220px; right: 0; height: var(--top-bar-height); min-height: 0; padding: var(--app-safe-top) 20px 0; margin: 0; z-index: 40; background: var(--surface); border-bottom: 1px solid var(--line); }
+  .workflow-setting-head h1 { margin: 0; }
+  .workflow-setting-head > div > span { display: none; }
+}
+/* Depth headers share one geometry, independent of page-intro sizing. */
+.detail-sheet > header, .booking-detail-bar, .workflow-setting-head, .workflow-wizard > header {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) 48px;
+  justify-content: stretch;
+  align-items: center;
+  column-gap: 8px;
+  padding-inline: 0;
+}
+.detail-sheet > header > button, .booking-detail-bar > button, .workflow-setting-head > button, .workflow-wizard > header > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  min-width: 48px;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+}
+/* Optical 20dp margins; the 48dp hit areas reach the header edges. */
+:is(.detail-sheet > header, .booking-detail-bar, .workflow-setting-head, .workflow-wizard > header) > button > svg { width: 24px; height: 24px; }
+/* ponytail: offsets match these Lucide outlines; recheck optical bounds when adding an action icon. */
+:is(.detail-sheet > header, .booking-detail-bar, .workflow-setting-head) > button:last-child > .lucide-x { transform: translateX(-3px); }
+:is(.detail-sheet > header, .booking-detail-bar, .workflow-setting-head) > button:last-child > .lucide-pencil { transform: translateX(-7px); }
+:is(.detail-sheet > header, .booking-detail-bar, .workflow-setting-head) > button:last-child > .lucide-play { transform: translateX(-6px); }
+.workflow-setting-head > div, .workflow-wizard > header > div { min-width: 0; margin: 0; }
+.detail-sheet > header > strong, .booking-detail-bar > strong, .workflow-setting-head h1 {
+  min-width: 0;
+  margin: 0;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.workflow-setting-head .header-preview { width: 48px; padding: 0; margin: 0; }
+.workflow-wizard > header { grid-template-columns: 48px minmax(0, 1fr) auto; }
+.workflow-wizard > header .wizard-restart { width: auto; padding-inline: 20px; border-radius: 8px; }
+@media (max-width: 599px) {
+  .work-list > button, .inventory-page .product-list > button { display: grid; grid-template-columns: 40px minmax(0, 1fr) 18px; row-gap: 8px; }
+  .work-list > button > span, .product-list > button > span { align-self: start; }
+  .work-list > button > b, .product-list > button > b { grid-column: 2; grid-row: 2; justify-self: start; padding: 4px 8px; }
+  .work-list > button > svg, .product-list > button > svg { grid-column: 3; grid-row: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+}

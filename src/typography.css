@@ -1,0 +1,114 @@
+/* M3 roles use the device's system font. No display-scale marketing headings.
+   Korean uses zero tracking; rem sizes follow the user's text-size preference. */
+:root {
+  --font-family: system-ui, sans-serif;
+  --type-headline-medium: 400 1.75rem/2.25rem var(--font-family);
+  --type-headline-small: 400 1.5rem/2rem var(--font-family);
+  --type-title-large: 500 1.375rem/1.75rem var(--font-family);
+  --type-title-medium: 500 1rem/1.5rem var(--font-family);
+  --type-title-small: 500 .875rem/1.25rem var(--font-family);
+  --type-body-large: 400 1rem/1.5rem var(--font-family);
+  --type-body-medium: 400 .875rem/1.25rem var(--font-family);
+  --type-body-small: 400 .75rem/1rem var(--font-family);
+  --type-label-large: 500 .875rem/1.25rem var(--font-family);
+  --type-label-medium: 500 .75rem/1rem var(--font-family);
+  font-size: 100%;
+  font-family: var(--font-family);
+  font-synthesis: none;
+}
+*, *::before, *::after { letter-spacing: 0; }
+body { font: var(--type-body-large); }
+button, input, select, textarea { font: inherit; }
+button { font: var(--type-label-large); }
+input, select, textarea { font: var(--type-body-large); }
+input::placeholder, textarea::placeholder { font-weight: 400; }
+strong, b { font-weight: 500; }
+small { font: var(--type-body-medium); }
+h1 { font: var(--type-headline-small); }
+h2 { font: var(--type-title-large); }
+h3, h4 { font: var(--type-title-medium); }
+h5, h6 { font: var(--type-title-small); }
+:is(h1,h2,h3,h4,p,strong,small,span,label,button) { word-break: keep-all; overflow-wrap: anywhere; }
+
+/* Page identity > section title > primary row > supporting copy > metadata. */
+.app-bar strong, .booking-detail-bar strong, .detail-sheet > header strong,
+.workflow-setting-head h1, .onboarding-appbar > strong, .workflow-wizard > header strong {
+  font: var(--type-title-large);
+}
+.page-intro h1, .booking-summary h1, .onboarding-title h1, .wizard-title h1,
+.consent-title h1, .login-form h2, .onboarding-test-finished h1,
+.onboarding-outcome-result h1, .workflow-preview-result h2 { font: var(--type-headline-small); }
+.workflow-setting-head h1 { font: var(--type-title-large); }
+.section-title h2, .booking-procedure h2, .form-section-title strong,
+.field-definition-list h2, .account-settings h2 { font: var(--type-title-medium); }
+.runtime-head h2, .workflow-test-card h2, .onboarding-test-card > header strong,
+.wizard-review h2, .calendar-agenda h2 { font: var(--type-title-large); }
+.work-list strong, .product-list strong, .settings-list strong, .setting-group-row strong,
+.trigger-head strong, .trigger-steps strong, .field-definition-list strong,
+.attention-list strong, .schedule-list strong, .checklist strong, .booking-trigger strong,
+.choice-list strong, .template-grid strong, .wizard-choices strong, .result-presets strong,
+.notification-switch strong, .notification-choice strong, .onboarding-detail-offer strong,
+.onboarding-workflow-actions strong, .onboarding-workflow-list strong,
+.onboarding-benefits strong, .structure-preview strong, .onboarding-ready-product > span,
+.workflow-test-card > div strong, .onboarding-test-card > div strong, .brand strong, .calendar-agenda-list strong {
+  font: var(--type-title-medium);
+}
+.onboarding-title p, .wizard-title p, .consent-title p, .login-form > p,
+.onboarding-test-finished p, .onboarding-outcome-result p, .workflow-preview-result p,
+.account-settings p, .booking-memo { font: var(--type-body-large); }
+.work-list small, .settings-list small, .product-list em, .work-list em,
+.attention-list small, .schedule-list > button > span, .checklist small,
+.choice-list small, .template-grid small, .wizard-choices small, .result-presets small,
+.onboarding-detail-offer small, .onboarding-workflow-actions small,
+.onboarding-workflow-list em, .onboarding-benefits small, .empty-copy, .empty-trigger,
+.onboarding-field-note, .onboarding-change-note, .template-field-guide span,
+.onboarding-workflow-empty small, .push-onboarding-card small, .notification-choice small,
+.notification-switch small, .settings-message, .form-error, .onboarding-error,
+.booking-alert p, .info-note, .booking-summary p, .booking-summary dl, .booking-detail-footer p, .calendar-agenda p, .calendar-agenda-list small {
+  font: var(--type-body-medium);
+}
+.page-intro > div > span, .section-title > div > span, .eyebrow, .wizard-title > span,
+.onboarding-step-count, .onboarding-context span, .booking-summary > small,
+.onboarding-workflow-list p small, .onboarding-outcome-result > small,
+.workflow-test-card > header > span, .onboarding-test-card > header > span,
+.booking-state > span, .runtime-head > span, .runtime-progress > span {
+  font: var(--type-label-medium);
+}
+.form-field > span, .onboarding-form label > span, .wizard-input > span, .field-builder label > span,
+.field-builder > div > span, .item-option-input > span, .wizard-items label,
+.outcome-block > span, .booking-trigger h3, .onboarding-field-picker b,
+.onboarding-field-picker > strong, .consent-list strong { font: var(--type-label-large); }
+.product-list small, .schedule-list small, .schedule-list time,
+.setting-group-row small, .setting-group-row em, .trigger-head small, .trigger-steps small,
+.field-definition-list small, .form-section-title small, .runtime-head p,
+.workflow-test-card > header p, .workflow-test-card > div small,
+.onboarding-test-card > div small, .onboarding-test-card > footer > small,
+.structure-preview small, .onboarding-ready-product small, .booking-trigger small,
+.booking-detail-footer small, .consent-list small, .side-user small,
+.onboarding-field-picker small, .calendar-legend span, .resource-name small,
+.resource-head small, .date-row small { font: var(--type-body-small); }
+.bottom-nav button, .product-list > button > b, .work-list > button > b,
+.attention-list > button > span, .settings-list > button > i, .plan-badge,
+.resource-name strong, .resource-head strong, .booking-bar span,
+.onboarding-workflow-list > button > b, .check-index, .step-dot,
+.onboarding-restart, .workflow-wizard > header .wizard-restart { font: var(--type-label-medium); }
+.date-row strong, .inventory-summary b, .booking-state strong { font: var(--type-title-medium); }
+.inventory-summary span, .calendar-tools label, .choice-list em,
+.onboarding-context, .side-user strong { font: var(--type-body-medium); }
+.status-strip strong { font: var(--type-headline-medium); }
+.status-strip small { font: var(--type-body-medium); }
+.status-strip strong, .date-row strong, .schedule-list time, .booking-summary dd {
+  font-variant-numeric: tabular-nums;
+}
+.page-intro h1 b { font: inherit; }
+
+/* Multi-line labels must not be clipped by the older fixed-height controls. */
+.onboarding-appbar > strong, .workflow-wizard > header > strong { min-width: 0; }
+.onboarding-restart, .workflow-wizard > header .wizard-restart { white-space: normal; }
+.resource-head strong { line-height: 1rem; }
+.resource-name strong, .booking-bar span { font: var(--type-title-small); }
+.choice-list > button, .template-grid button, .wizard-choices > button,
+.result-presets button, .onboarding-field-picker label { height: auto; }
+
+/* Uppercase Latin labels need tracking; Korean keeps zero tracking. */
+.eyebrow, .login-identity > div > span { letter-spacing: .08em; }
